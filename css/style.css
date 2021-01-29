@@ -97,13 +97,25 @@ body {
   align-items: center;
 }
 
-.contacts-icon {
+.contacts-icon-envelope {
+  display: block;
+  height: 16px;
+  width: 21px;
   margin-right: 10px;
   fill: currentColor;
 }
 
-.contacts-icon:hover {
-  fill: var(--accent-color);
+.contacts-icon-smartphone {
+  display: block;
+  height: 24px;
+  width: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-contacts .item {
+  display: flex;
+  align-items: center;
 }
 
 .header-contacts .item + .item {
@@ -337,9 +349,18 @@ body {
   justify-content: center;
 }
 
-.social-list-item a {
-  display: block;
-  padding: 12px;
+.social-list-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
 }
 
 .social-list-item:not(:last-child) {
@@ -353,7 +374,7 @@ body {
 
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
-  fill: var(--accent-color);
+  fill: var(--link-color);
 }
 
 /*==================== Постоянные клиенты =============== */
@@ -486,6 +507,7 @@ body {
   letter-spacing: 0.03em;
   padding: 6px 22px;
   border: unset;
+  cursor: pointer;
 }
 
 .filters .item:not(:last-child) {
@@ -542,10 +564,15 @@ body {
   color: var(--primary-text-color);
 }
 
-.projsects-list-link:hover {
+.projsects-list-link:hover,
+.projsects-list-link:focus {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-list-image {
+  width: 100%;
 }
